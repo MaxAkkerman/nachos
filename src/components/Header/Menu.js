@@ -15,16 +15,16 @@ const useStyles = makeStyles({
         lineHeight: "25px",
         alignItems: "center",
         color: "#ffffff",
-        flexDirection: "row"
+        flexDirection: "row",
+        "@media (min-width : 950px) and (max-width : 1220px)": {
+            fontSize: "15px",
+        }
     },
     menuContainer: {
-        position: "absolute",
         margin: "28px auto",
-        left: "38%",
         flexDirection: "row",
         display: "flex",
     }
-
 });
 
 function ScrollTo(x, y) {

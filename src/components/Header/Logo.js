@@ -9,48 +9,77 @@ const useStyles = makeStyles({
     img: {
         marginLeft: "16px",
         width: "100%",
-        height: "100%"
+        height: "100%",
+        "@media (min-width : 950px) and (max-width : 1220px)": {
+            width: "20%",
+            height: "auto",
+            objectFit: "contain",
+        },
+        "@media (max-width : 949px)": {
+            width: "20%",
+            height: "auto",
+            objectFit: "contain",
+        },
+        "@media (min-width : 319px) and (max-width : 760px)": {
+            marginLeft: "8px",
+        },
+
     },
     imgLogo: {
         marginLeft: "16px",
         width: "166px",
-        height: "100%"
+        height: "100%",
+        "@media (min-width : 950px) and (max-width : 1220px)": {
+            width: "60%",
+            height: "auto",
+            objectFit: "contain",
+        },
+        "@media (max-width : 949px)": {
+            width: "60%",
+            height: "auto",
+            objectFit: "contain",
+        },
+        "@media (min-width : 319px) and (max-width : 760px)": {
+            width: "70%",
+            height: "auto",
+            objectFit: "contain",
+            marginLeft: "0px",
+        },
     },
-
     imgContainer: {
         display: "flex",
         width: "292px",
         marginLeft: "48px",
         marginTop: "16px",
         height: "48px",
+        "@media (min-width : 950px) and (max-width : 1220px)": {
+            width: "20%",
+            marginLeft: "48px",
+            height: "48px",
+        },
+        "@media (min-width : 760px) and (max-width : 949px)": {
+            width: "29%",
+            marginLeft: "48px",
+            height: "48px",
+            marginTop:"23px"
+        },
+        "@media (min-width : 319px) and (max-width : 760px)": {
+            width: "120px",
+            marginLeft: "16px",
+            height: "24px",
+            marginTop:"16px"
+        },
     },
-    imgContainerMobile: {
-        display: "flex",
-        width: "150px",
-        marginLeft: "16px",
-        marginTop: "16px",
-        height: "26px",
-    },
-    imgMobile:{
-        marginLeft: "8px",
-        width: "24px",
-        height: "24px"
-    },
-    imgLogoMobile:{
-        width: "83px",
-        height: "24px"
-    }
-
 });
 
-function Logo(props) {
+function Logo() {
     const classes = useStyles();
     return (
         <>
-            <Grid className={!props.isMobile ? classes.imgContainerMobile : classes.imgContainer}>
-                <img className={!props.isMobile ? classes.imgLogoMobile : classes.imgLogo} src={logo3} alt={"logo"}/>
-                <img className={!props.isMobile ? classes.imgMobile : classes.img} src={logo2} alt={"logo1"}/>
-                <img className={!props.isMobile ? classes.imgMobile : classes.img} src={logo1} alt={"logo2"}/>
+            <Grid className={classes.imgContainer}>
+                <img className={classes.imgLogo} src={logo3} alt={"logo"}/>
+                <img className={classes.img} src={logo2} alt={"logo1"}/>
+                <img className={classes.img} src={logo1} alt={"logo2"}/>
             </Grid>
         </>
     )

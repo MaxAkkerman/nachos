@@ -11,40 +11,46 @@ import basement3 from "../../static/media/basementImgs/Vector-2.png";
 const useStyles = makeStyles({
     winnersWrapper: {
         width: "100%",
-        height: "650px",
-        margin: "59px auto",
+        margin: "59px auto 0 auto",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        height: "fit-content",
+        minHeight: "500px",
     },
     winnersContainer: {
         width: "100%",
-        height: "996px",
+        height: "fit-content",
+        maxHeight: "996px",
         padding: "0",
-        backgroundColor: "#120806"
+        backgroundColor: "#120806",
+        display:"flex",
+        flexDirection:"column",
     },
     basement1: {
         position: "absolute",
         width: "100%",
-        height: "225px",
-        top: "6px",
+        maxHeight:"225px",
+        bottom:"0"
     },
     basement2: {
         position: "absolute",
         width: "100%",
-        height: "225px",
+        maxHeight:"225px",
         paddingLeft: '77px',
+        bottom:"0"
     },
     basement3: {
+        maxHeight:"225px",
         position: "absolute",
         width: "100%",
-        height: "225px",
-        right: "68px"
+        right: "68px",
+        bottom:"0"
     },
     basementImgWrapper: {
-        display: "grid",
+        flexGrow: "3",
         width: "100%",
-        height: "228px",
+        height: "300px",
         overflow: "hidden",
         background: "#120806",
         position: "relative",

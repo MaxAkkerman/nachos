@@ -12,6 +12,9 @@ const useStyles = makeStyles({
         display: "flex",
         alignItems: "center",
         color: "#FFFFFF",
+        "@media (min-width : 950px) and (max-width : 1220px)": {
+            fontSize: "13px",
+        }
     },
     button: {
         border: "2px solid #FFFFFF",
@@ -24,11 +27,18 @@ const useStyles = makeStyles({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        "@media (min-width : 950px) and (max-width : 1220px)": {
+            width: "130px",
+            height: "35px",
+        }
     },
     menuContainer: {
         marginTop: "24px",
         marginRight: "48px",
-        marginLeft: "auto"
+        marginLeft: "auto",
+        "@media (min-width : 950px) and (max-width : 1220px)": {
+            marginRight: "25px",
+        }
     }
 
 });

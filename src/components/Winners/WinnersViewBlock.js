@@ -15,7 +15,6 @@ const useStyles = makeStyles({
     winnersViewBlockWrapper: {
         display: "flex",
         alignItems: "center",
-
     },
     winnersViewBlockContainer: {
         width: "605.97px",

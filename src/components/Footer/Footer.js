@@ -10,6 +10,17 @@ const useStyles = makeStyles({
         height: "103px",
         border: "none",
         display: "flex",
+        "@media (min-width : 760px) and (max-width : 949px)": {
+            width: "100%",
+            height: "125px",
+            flexDirection: "column-reverse",
+        },
+        "@media (min-width : 319px) and (max-width : 759px)": {
+            marginTop:"0px",
+            height: "176px",
+            flexDirection: "column-reverse",
+            justifyContent: "flex-end",
+        },
     },
     basementTextProperties: {
         marginLeft: "48px",
@@ -23,6 +34,19 @@ const useStyles = makeStyles({
         fontSize: "13px",
         lineHeight: "16px",
         color: "#F9F9F8",
+        '@media (max-width:325px)': {
+            textAlign: "center",
+            margin: "8px auto 0px auto ",
+        },
+        "@media (min-width : 760px) and (max-width : 949px)": {
+            marginTop: "5px",
+            alignSelf:"center",
+            display:"flex",
+            marginBottom:"unset",
+            justifyContent:"center",
+            width:"100%",
+            marginLeft:"unset"
+        },
     },
     basementContacts: {
         marginTop: "16px",
@@ -32,6 +56,18 @@ const useStyles = makeStyles({
         height: "65px",
         flex: "0.6",
         alignItems: "center",
+        '@media (max-width:325px)': {
+            marginTop: "23px",
+            width: "unset",
+            height: "unset",
+            flex: "unset"
+        },
+        "@media (min-width : 760px) and (max-width : 949px)": {
+            width: "100%",
+        },
+        "@media (min-width : 319px) and (max-width : 759px)": {
+            marginTop: "23px",
+        },
     },
     basementArrow: {
         marginTop: "26px",
@@ -49,6 +85,11 @@ const useStyles = makeStyles({
         fontSize: "16px",
         lineHeight: "20px",
         color: "#FFFFFF",
+        '@media (max-width:325px)': {
+            margin: "1px 17px 8px 17px",
+            textAlign: "center",
+            width: "234px"
+        }
     },
     basementCallNumber: {
         fontFamily: "Fira Sans",
@@ -58,42 +99,6 @@ const useStyles = makeStyles({
         lineHeight: "32px",
         color: "#120806",
     },
-    footerContainerMobile: {
-        width: "100%",
-        border: "none",
-        height: "164px",
-        display: "flex",
-        background: "#C84916",
-        flexDirection: "column-reverse",
-        justifyContent: "flex-end",
-    },
-    basementTextPropertiesMobile: {
-        color: "#F9F9F8",
-        fontSize: "13px",
-        fontStyle: "normal",
-        fontFamily: "Fira Sans",
-        fontWeight: "normal",
-        lineHeight: "16px",
-        textAlign: "center",
-        marginBottom: "29px",
-    },
-    basementContactsMobile: {
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        marginTop: "23px",
-    },
-    basementCallInfoMobile: {
-        color: "#FFFFFF",
-        fontSize: "16px",
-        fontStyle: "normal",
-        margin: "1px 17px 8px 17px",
-        fontFamily: "Fira Sans",
-        fontWeight: "normal",
-        lineHeight: "20px",
-        textAlign: "center",
-        width:"209px"
-    }
 });
 
 
@@ -109,9 +114,9 @@ function Footer(props) {
     }
 
     return (
-        <Grid className={props.isMobile ? classes.footerContainer : classes.footerContainerMobile}>
+        <Grid className={classes.footerContainer}>
 
-            <Grid className={props.isMobile ? classes.basementTextProperties : classes.basementTextPropertiesMobile}>
+            <Grid className={classes.basementTextProperties}>
                 <Grid>
                     © 2020, «Акти»
                 </Grid>
@@ -120,11 +125,11 @@ function Footer(props) {
                 </Grid>
             </Grid>
 
-            <Grid className={props.isMobile ? classes.basementContacts : classes.basementContactsMobile}>
+            <Grid className={classes.basementContacts}>
                 <Grid className={classes.basementCallNumber}>
                     8 (909) 444-45-13
                 </Grid>
-                <Grid className={props.isMobile ? classes.basementCallInfo : classes.basementCallInfoMobile}>
+                <Grid className={classes.basementCallInfo}>
                     Звонок по России бесплатный. Пн-Сб с 9:00 до 19:00 (МСК)
                 </Grid>
             </Grid>

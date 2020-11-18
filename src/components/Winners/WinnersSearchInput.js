@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import SearchIcon from '@material-ui/icons/Search';
@@ -7,7 +7,6 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import InputMask from 'react-input-mask';
 
 const useStyles = makeStyles({
-
     winnersSearchInput: {
         marginTop: "16px",
         borderRadius: "3px",
@@ -81,7 +80,6 @@ function WinnersSearchInput(props) {
     }
 
     return (
-
         <>
             <Grid className={classes.winnersSearchInput}>
                 <InputMask
